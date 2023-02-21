@@ -147,11 +147,3 @@ Sets the allowance to migrate to a `vault` address.
 | oldVault | address | The current vault address                          |
 | newVault | address | The vault where assets are going to be migrated to |
 
-
-
-a
-
-
-
-
-
