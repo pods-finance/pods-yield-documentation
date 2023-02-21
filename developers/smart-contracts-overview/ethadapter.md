@@ -2,6 +2,8 @@
 
 The **EthAdapter** is responsible for accepting deposits and withdrawals in ETH, instead of accepting the staked ETH directly. It uses Curve as a trading venue under the hood.
 
+src: [https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol](https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol)
+
 ## Public State Variables
 
 ### pool
@@ -74,9 +76,9 @@ Convert `ethAmount` ETH to stETH using Curve pool and returns the resulting amou
 
 **Returns**
 
-| Name    | Type    | Description                           |
-| ------- | ------- | ------------------------------------- |
-| unnamed | uint256 | Amount of stETH receiveid in exchange |
+| Name | Type    | Description                           |
+| ---- | ------- | ------------------------------------- |
+| \_0  | uint256 | Amount of stETH receiveid in exchange |
 
 ### convertToETH
 
@@ -96,13 +98,147 @@ Convert `stethAmount` stETH to ETH using Curve pool and returns the resulting am
 
 **Returns**
 
-| Name    | Type    | Description                         |
-| ------- | ------- | ----------------------------------- |
-| unnamed | uint256 | Amount of ETH receiveid in exchange |
+| Name | Type    | Description                         |
+| ---- | ------- | ----------------------------------- |
+| \_0  | uint256 | Amount of ETH receiveid in exchange |
 
+## Write Methods <a href="#deposit" id="deposit"></a>
 
+### deposit <a href="#deposit" id="deposit"></a>
 
+[https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L81](https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L81)
 
+```solidity
+function deposit(contract IVault vault, address receiver, uint256 minOutput) external payable returns (uint256)
+```
 
+Deposit `msg.value` of ETH, convert to stETH and deposit into `vault`
 
+**Parameters**
+
+| Name      | Type            | Description                                          |
+| --------- | --------------- | ---------------------------------------------------- |
+| vault     | contract IVault | Pods' strategy vault that will receive the stETH     |
+| receiver  | address         | Address that will be the owner of the Vault's shares |
+| minOutput | uint256         | slippage control. Minimum acceptable amount of stETH |
+
+**Returns**
+
+| Name | Type    | Description                                                 |
+| ---- | ------- | ----------------------------------------------------------- |
+| \_0  | uint256 | uint256 Amount of shares returned by vault ERC4626 contract |
+
+### redeem
+
+[https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L100](https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L100)
+
+```solidity
+function redeem(contract IVault vault, uint256 shares, address receiver, uint256 minOutput) external nonpayable returns (uint256)
+```
+
+Redeem `shares` shares, receive stETH, trade stETH for ETH and send to receiver
+
+**Parameters**
+
+| Name      | Type            | Description                                                         |
+| --------- | --------------- | ------------------------------------------------------------------- |
+| vault     | contract IVault | Pods' strategy vault that will receive the shares and payback stETH |
+| shares    | uint256         | Amount of Vault's shares to redeem                                  |
+| receiver  | address         | Address that will receive back the ETH withdrawn from the `vault`   |
+| minOutput | uint256         | slippage control. Minimum acceptable amount of ETH                  |
+
+**Returns**
+
+| Name | Type    | Description                                          |
+| ---- | ------- | ---------------------------------------------------- |
+| \_0  | uint256 | uint256 Amount of assets received from Vault ERC4626 |
+
+### redeemWithPermit <a href="#redeemwithpermit" id="redeemwithpermit"></a>
+
+[https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L124](https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L124)
+
+```solidity
+function redeemWithPermit(contract IVault vault, uint256 shares, address receiver, uint256 minOutput, uint256 deadline, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 assets)
+```
+
+redeemWithPermit `shares` shares, receive stETH, trade stETH for ETH and send to receiver
+
+_Do not need to approve the shares in advance. The vault tokenized shares supports Permit_
+
+**Parameters**
+
+| Name      | Type            | Description                                                         |
+| --------- | --------------- | ------------------------------------------------------------------- |
+| vault     | contract IVault | Pods' strategy vault that will receive the shares and payback stETH |
+| shares    | uint256         | Amount of Vault's shares to redeem                                  |
+| receiver  | address         | Address that will receive back the ETH withdrawn from `vault`       |
+| minOutput | uint256         | slippage control. Minimum acceptable amount of ETH                  |
+| deadline  | uint256         | deadline that this transaction will be valid                        |
+| v         | uint8           | recovery id                                                         |
+| r         | bytes32         | ECDSA signature output                                              |
+| s         | bytes32         | ECDSA signature output                                              |
+
+**Returns**
+
+| Name   | Type    | Description                                  |
+| ------ | ------- | -------------------------------------------- |
+| assets | uint256 | Amount of assets received from Vault ERC4626 |
+
+### withdraw <a href="#withdraw" id="withdraw"></a>
+
+[https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L148](https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L148)
+
+```solidity
+function withdraw(contract IVault vault, uint256 assets, address receiver, uint256 minOutput) external nonpayable returns (uint256 shares)
+```
+
+Withdraw `assets` assets, receive stETH, trade stETH for ETH and send to receiver
+
+_Do not need to approve the shares in advance. The vault tokenized shares supports Permit_
+
+**Parameters**
+
+| Name      | Type            | Description                                                         |
+| --------- | --------------- | ------------------------------------------------------------------- |
+| vault     | contract IVault | Pods' strategy vault that will receive the shares and payback stETH |
+| assets    | uint256         | Amount of assets (stETH) to redeem                                  |
+| receiver  | address         | Address that will receive back the ETH withdrawn from the Vault     |
+| minOutput | uint256         | slippage control. Minimum acceptable amount of ETH                  |
+
+**Returns**
+
+| Name   | Type    | Description                                        |
+| ------ | ------- | -------------------------------------------------- |
+| shares | uint256 | Amount of shares burned in order to receive assets |
+
+### withdrawWithPermit <a href="#withdrawwithpermit" id="withdrawwithpermit"></a>
+
+[https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L171](https://github.com/pods-finance/yield-contracts/blob/main/contracts/proxy/ETHAdapter.sol#L171)
+
+```solidity
+function withdrawWithPermit(contract IVault vault, uint256 assets, address receiver, uint256 minOutput, uint256 deadline, uint8 v, bytes32 r, bytes32 s) external nonpayable returns (uint256 shares)
+```
+
+withdrawWithPermit `assets` assets, receive stETH, trade stETH for ETH and send to receiver
+
+_Do not need to approve the shares in advance. Vault's tokenized shares supports Permit_
+
+**Parameters**
+
+| Name      | Type            | Description                                                         |
+| --------- | --------------- | ------------------------------------------------------------------- |
+| vault     | contract IVault | Pods' strategy vault that will receive the shares and payback stETH |
+| assets    | uint256         | Amount of assets (stETH) to redeem                                  |
+| receiver  | address         | Address that will receive back the ETH withdrawn from the Vault     |
+| minOutput | uint256         | slippage control. Minimum acceptable amount of ETH                  |
+| deadline  | uint256         | deadline that this transaction will be valid                        |
+| v         | uint8           | recovery id                                                         |
+| r         | bytes32         | ECDSA signature output                                              |
+| s         | bytes32         | ECDSA signature output                                              |
+
+**Returns**
+
+| Name   | Type    | Description                                        |
+| ------ | ------- | -------------------------------------------------- |
+| shares | uint256 | Amount of shares burned in order to receive assets |
 

@@ -31,6 +31,7 @@
 * [Smart Contracts Overview](developers/smart-contracts-overview/README.md)
   * [ConfigurationManager](developers/smart-contracts-overview/configurationmanager.md)
   * [EthAdapter](developers/smart-contracts-overview/ethadapter.md)
+  * [STETHVault](developers/smart-contracts-overview/stethvault.md)
 * [Contracts Addresses](developers/contracts-addresses.md)
 
 ## Connect

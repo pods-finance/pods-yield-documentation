@@ -2,6 +2,8 @@
 
 The **ConfigurationManager** is the management layer of the protocol; it sets global or specific vault's parameters as a cap, withdraws fee, migration destination, and the `vaultController` role for each vault.
 
+src: [https://github.com/pods-finance/yield-contracts/blob/main/contracts/configuration/ConfigurationManager.sol](https://github.com/pods-finance/yield-contracts/blob/main/contracts/configuration/ConfigurationManager.sol)
+
 ## View Methods
 
 ### getParameter
