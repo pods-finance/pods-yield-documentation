@@ -23,9 +23,9 @@ Retrieves the value of a parameter set to contract. If the value is not a uint25
 
 **Returns**
 
-| Name    | Type    | Description          |
-| ------- | ------- | -------------------- |
-| unnamed | uint256 | The stored parameter |
+| Name | Type    | Description          |
+| ---- | ------- | -------------------- |
+| \_0  | uint256 | The stored parameter |
 
 ### getGlobalParameter
 
@@ -45,9 +45,9 @@ Retrieves the value of a global parameter. If the value is not a uint256, you wi
 
 **Returns**
 
-| Name    | Type    | Description          |
-| ------- | ------- | -------------------- |
-| unnamed | uint256 | The stored parameter |
+| Name | Type    | Description          |
+| ---- | ------- | -------------------- |
+| \_0  | uint256 | The stored parameter |
 
 ### getCap
 
@@ -67,9 +67,9 @@ Retrieves the value of the cap set to a contract. If the value is not a uint256,
 
 **Returns**
 
-| Name    | Type    | Description    |
-| ------- | ------- | -------------- |
-| unnamed | uint256 | The stored cap |
+| Name | Type    | Description    |
+| ---- | ------- | -------------- |
+| \_0  | uint256 | The stored cap |
 
 ### getVaultMigration
 
@@ -89,9 +89,9 @@ Retrieves the value of the destination contract of an original vault.
 
 **Returns**
 
-| Name    | Type    | Description           |
-| ------- | ------- | --------------------- |
-| unnamed | address | The destination vault |
+| Name | Type    | Description           |
+| ---- | ------- | --------------------- |
+| \_0  | address | The destination vault |
 
 ## Write Methods
 
