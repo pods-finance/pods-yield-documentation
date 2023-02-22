@@ -2,6 +2,8 @@
 
 Base contract responsible for the main logic of our vault. It inherits ERC4626 and ERC20 contracts, so, some functions are not shown below. We only document the functions that we did any modification or overridden on it. You can check [ERC4626](https://eips.ethereum.org/EIPS/eip-4626) specification here, and [ERC20](https://eips.ethereum.org/EIPS/eip-20) here.
 
+src: [https://github.com/pods-finance/yield-contracts/blob/main/contracts/vaults/BaseVault.sol](https://github.com/pods-finance/yield-contracts/blob/main/contracts/vaults/BaseVault.sol)
+
 ## Public State Variables
 
 ### DENOMINATOR <a href="#denominator" id="denominator"></a>
