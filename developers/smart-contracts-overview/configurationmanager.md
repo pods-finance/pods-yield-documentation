@@ -2,8 +2,6 @@
 
 The **ConfigurationManager** is the management layer of the protocol; it sets global or specific vault's parameters as a cap, withdraws fee, migration destination, and the `vaultController` role for each vault.
 
-src: [https://github.com/pods-finance/yield-contracts/blob/main/contracts/configuration/ConfigurationManager.sol](https://github.com/pods-finance/yield-contracts/blob/main/contracts/configuration/ConfigurationManager.sol)
-
 ## View Methods
 
 ### getParameter
@@ -25,9 +23,9 @@ Retrieves the value of a parameter set to contract. If the value is not a uint25
 
 **Returns**
 
-| Name | Type    | Description          |
-| ---- | ------- | -------------------- |
-| \_0  | uint256 | The stored parameter |
+| Name    | Type    | Description          |
+| ------- | ------- | -------------------- |
+| unnamed | uint256 | The stored parameter |
 
 ### getGlobalParameter
 
@@ -47,9 +45,9 @@ Retrieves the value of a global parameter. If the value is not a uint256, you wi
 
 **Returns**
 
-| Name | Type    | Description          |
-| ---- | ------- | -------------------- |
-| \_0  | uint256 | The stored parameter |
+| Name    | Type    | Description          |
+| ------- | ------- | -------------------- |
+| unnamed | uint256 | The stored parameter |
 
 ### getCap
 
@@ -69,9 +67,9 @@ Retrieves the value of the cap set to a contract. If the value is not a uint256,
 
 **Returns**
 
-| Name | Type    | Description    |
-| ---- | ------- | -------------- |
-| \_0  | uint256 | The stored cap |
+| Name    | Type    | Description    |
+| ------- | ------- | -------------- |
+| unnamed | uint256 | The stored cap |
 
 ### getVaultMigration
 
@@ -91,9 +89,9 @@ Retrieves the value of the destination contract of an original vault.
 
 **Returns**
 
-| Name | Type    | Description           |
-| ---- | ------- | --------------------- |
-| \_0  | address | The destination vault |
+| Name    | Type    | Description           |
+| ------- | ------- | --------------------- |
+| unnamed | address | The destination vault |
 
 ## Write Methods
 
@@ -148,4 +146,12 @@ Sets the allowance to migrate to a `vault` address.
 | -------- | ------- | -------------------------------------------------- |
 | oldVault | address | The current vault address                          |
 | newVault | address | The vault where assets are going to be migrated to |
+
+
+
+a
+
+
+
+
 
