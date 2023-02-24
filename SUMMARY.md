@@ -13,6 +13,7 @@
   * [User Flow](stethvv/how-stethvv-works/user-flow.md)
 * [stETHvv Timeline](stethvv/stethvv-timeline.md)
 * [Fees](stethvv/fees.md)
+* [📃 Whitepaper](stethvv/whitepaper.md)
 
 ## security
 
