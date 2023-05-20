@@ -10,11 +10,11 @@ Security is a core pillar of our organization, and this section provides a high-
 
 ### 🛡 Audits
 
-We uphold the highest industry standards by regularly undergoing audits conducted by reputable third-party organizations. Our stETHvv 2.0 and 1.0 contracts, including their dependencies, have been thoroughly audited by organizations such as OpenZeppelin and ABDK. CredShields also audited the stETHvv 1.0 version. The full list of audits conducted, along with their reports, can be found on our [GitHub page](https://github.com/pods-finance/yield-contracts/tree/main/audits).
+We uphold the highest industry standards by regularly undergoing audits conducted by reputable third-party organizations. Our stETHvv 2.0 and 1.0 contracts, including their dependencies, have been thoroughly audited by organizations such as **OpenZeppelin and ABDK. CredShields** also audited the stETHvv 1.0 version. The full list of audits conducted, along with their reports, can be found on our [GitHub page](https://github.com/pods-finance/yield-contracts/tree/main/audits).
 
 ### 🐛 Bug Bounty Program
 
-Our commitment to security also extends to encouraging external contributions through a [Bug Bounty Program](https://immunefi.com/bounty/pods/), hosted on ImmuneFi. By offering rewards of up to $100,000 or 5% of the funds at risk, we actively incentivize the discovery and reporting of potential vulnerabilities in our system.
+Our commitment to security also extends to encouraging external contributions through a [Bug Bounty Program](https://immunefi.com/bounty/pods/), hosted on ImmuneFi. By offering rewards of up to **$100,000 or 5% of the funds at risk**, we actively incentivize the discovery and reporting of potential vulnerabilities in our system.
 
 ### 🔐 Access Control
 
@@ -32,7 +32,7 @@ Each of these roles is designed with stringent access controls to ensure securit
 
 We are committed to maintaining the highest level of quality and security in our operations. To this end, we recently engaged DeFi Safety, a well-regarded entity in the blockchain space, to conduct an extensive quality review of our system.
 
-We're proud to announce that we scored a remarkable 97% on their evaluation, placing us in the top 5 DeFi projects reviewed by DeFi Safety. This outstanding result is a testament to the robustness of our security protocols and the diligence of our team.
+We're proud to announce that we scored a remarkable **97%** on their evaluation, placing us in the t**op 5 DeFi projects reviewed by DeFi Safety**. This outstanding result is a testament to the robustness of our security protocols and the diligence of our team.
 
 For full transparency, we have made the complete report available. You can access and review here: [https://defisafety.com/app/pqrs/539](https://defisafety.com/app/pqrs/539)
 
@@ -55,8 +55,9 @@ We believe in sharing our knowledge and expertise to foster a more secure crypto
 
 Our security efforts have been recognized and applauded by various security companies on social media. These acknowledgments attest to the effectiveness of our security measures and our proactive approach in maintaining a secure environment for our users.
 
-* (First project to implement Trail of Bits Crytic) [https://twitter.com/thebensams/status/1635704105523109888](https://twitter.com/thebensams/status/1635704105523109888)
-* (Fastest payment in a bug bounty from Immunefi)\
+* The first project to implement Trail of Bits Crytic properties:\
+  [https://twitter.com/thebensams/status/1635704105523109888](https://twitter.com/thebensams/status/1635704105523109888)
+* Fastest payment in a bug bounty from Immunefi:\
   [https://medium.com/immunefi/pods-finance-bug-fix-postmortem-61a576897ebd](https://medium.com/immunefi/pods-finance-bug-fix-postmortem-61a576897ebd)
 
 #### Parallel Projects
