@@ -2,6 +2,12 @@
 
 Security is a core pillar of our organization, and this section provides a high-level overview of the various security measures we have in place to safeguard our operations.
 
+* [Audits](security-overview.md#audits)
+* [Bug Bounty Program (BBP)](security-overview.md#bug-bounty-program)
+* [Access / Admin Controls](security-overview.md#access-control)
+* [Quality Review - DeFi Safety](security-overview.md#quality-review-defi-safety)
+* [Other Achievements](security-overview.md#other-achievements)
+
 ### 🛡 Audits
 
 We uphold the highest industry standards by regularly undergoing audits conducted by reputable third-party organizations. Our stETHvv 2.0 and 1.0 contracts, including their dependencies, have been thoroughly audited by organizations such as OpenZeppelin and ABDK. CredShields also audited the stETHvv 1.0 version. The full list of audits conducted, along with their reports, can be found on our [GitHub page](https://github.com/pods-finance/yield-contracts/tree/main/audits).
