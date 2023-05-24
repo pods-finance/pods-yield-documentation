@@ -62,9 +62,17 @@ Yes.&#x20;
 
 ## Is there a withdrawal window?
 
-Right now yes. After you make the deposit, you will need to wait until the next round (after we process the deposit) to be able to withdraw.
+**No**. You can withdraw anytime.\
+\
+Although, It depends on whether or not your deposits have been processed. you can check if the deposit was processed by clicking on the "show breakdown" inside the vault page.
 
-NOTE: In our next vault version, there will be an emergency function to withdraw funds at any moment in time.
+<figure><img src="../.gitbook/assets/Screen Shot 2023-05-24 at 10.33.21 AM.png" alt=""><figcaption><p>Breakdown Position visualization</p></figcaption></figure>
+
+* if your deposit has not been processed yet you can withdraw your deposit from the queue using Etherscan directly using the `refund`  function on each vault address.
+
+<figure><img src="../.gitbook/assets/Screen Shot 2023-05-24 at 10.35.46 AM.png" alt=""><figcaption><p>Refund function on Contract/Write in Etherscan</p></figcaption></figure>
+
+* if your deposit has been processed you can withdraw at any time from the app's front end.
 
 ## Have more questions?&#x20;
 
