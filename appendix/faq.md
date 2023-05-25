@@ -74,7 +74,9 @@ Although, It depends on whether or not your deposits have been processed. you ca
 
 * if your deposit has been processed you can withdraw at any time from the app's front end.
 
-## Have more questions?&#x20;
+**Tutorial video**: [https://youtu.be/FjCf59ldwxc](https://youtu.be/FjCf59ldwxc)
+
+Have more questions?&#x20;
 
 Reach out to us on our channels:
 
