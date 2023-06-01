@@ -18,7 +18,7 @@
 ## security
 
 * [🛡 Security Overview](security/security-overview.md)
-* [🔎 Audits](security/audits.md)
+* [🛡 Audits](security/audits.md)
 * [🐛 Bug Bounty Program (BBP)](security/bug-bounty-program-bbp.md)
 * [🔐 Access Control](security/access-control.md)
 

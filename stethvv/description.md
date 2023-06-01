@@ -28,6 +28,24 @@ The vault applies a principal protected strategy using derivatives. Being a prin
 
 The derivative structure is made of buying calls and puts, ranging from 10% to 20% OTM with weekly maturities. This structure is also known as a strangle.
 
+Let's take an example.
+
+The current spot price of ETH is 2000, so the strike for the put would be at least 1800 and 2200 for the call.&#x20;
+
+But let's say that the strikes available in the venues are:
+
+PUT:&#x20;
+
+* option 1: 1850 -> 7.5% OTM
+* option 2: 1700 -> 15% OTM
+
+CALL:
+
+* option 1: 2150 -> 7.5% OTM&#x20;
+* option 2: 2300 -> 15% OTM
+
+In this case, we always respect the 10% to 20% OTM, and we would choose option 2 in both scenarios.
+
 ### The scenarios
 
 📈 If the ETH price moves up considerably, the call option may enter _in-the-money_ and return more than the yield used to purchase it.&#x20;
