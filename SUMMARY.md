@@ -37,6 +37,7 @@
   * [BaseVault](developers/smart-contracts-overview/basevault.md)
 * [Contracts Addresses](developers/contracts-addresses.md)
 * [Integration guide](developers/integration-guide.md)
+* [How to deposit](developers/how-to-deposit.md)
 
 ## Connect
 

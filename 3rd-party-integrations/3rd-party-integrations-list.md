@@ -2,7 +2,7 @@
 description: Find Pods Yield's metrics and keep track of your position
 ---
 
-# Integrations
+# 3rd party integrations list
 
 ## Dune Analytics
 
