@@ -36,6 +36,7 @@
   * [STETHVault](developers/smart-contracts-overview/stethvault.md)
   * [BaseVault](developers/smart-contracts-overview/basevault.md)
 * [Contracts Addresses](developers/contracts-addresses.md)
+* [Integration guide](developers/integration-guide.md)
 
 ## Connect
 
@@ -46,9 +47,9 @@
 * [FAQ](appendix/faq.md)
 * [Glossary of Terms](appendix/glossary-of-terms.md)
 
-## Integrations
+## 3rd party integrations
 
-* [Integrations](integrations/integrations.md)
+* [3rd party integrations list](3rd-party-integrations/3rd-party-integrations-list.md)
 
 ## Additional Resources
 
