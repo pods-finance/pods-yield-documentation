@@ -51,6 +51,45 @@ Coming soon...
 {% endtab %}
 {% endtabs %}
 
-
-
 ### 2) If you are depositing using stETH directly
+
+For this scenario,  you will need to first approve stETH to be spent on behalf of our Vault.&#x20;
+
+{% tabs %}
+{% tab title="Javascript" %}
+<pre class="language-javascript"><code class="lang-javascript">import BigNumber from 'bignumber.js'
+import { ethers } from 'ethers'
+
+// Ethers.js
+<strong>// Parameters example
+</strong>const amount = (new BigNumber(1)).multipliedBy(new BigNumber(10).pow(18))
+const podsStethvvAddress = '0x463f9ed5e11764eb9029762011a03643603ad879' // Change here for stETHvv or ETHphoria
+const PodsVaultABI = '' // Get this in our Contract Addresses section
+const receiver = '0x123..' // Address that will receive the shares
+
+<strong>// 1) Approve Vault to spend stETH on your behalf
+</strong><strong>const stETHAddress = '0xae7ab96520de3a18e5e111b5eaab095312d7fe84'
+</strong><strong>const ERC20ABI = ''
+</strong>const stETH = await ethers.getContractAt(stETHAddress, ERC20ABI)
+await stETH.approve(podsStethvvAddress, amount)
+
+// 2) Deposit into stETHvv
+const PodsVault = await ethers.getContractAt(podsStethvvAddress, PodsVaultABI)
+
+/**
+  * @param receiver Address that will be the owner of the Vault's shares
+  * @param amount Amount to be deposited into the vault
+  * @return uint256 Amount of shares returned by vault ERC4626 contract
+ */
+await PodsVault.deposit(
+  amount, 
+  receiver
+)
+</code></pre>
+{% endtab %}
+
+{% tab title="Solidity" %}
+Coming soon...
+{% endtab %}
+{% endtabs %}
+
