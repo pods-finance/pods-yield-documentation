@@ -1,6 +1,6 @@
 # Integration guide
 
-In the big picture, if you want to integrate our strategy into your service, you can either interact directly with our vault using Javascript for instance, or use our collateral token as part of a different strategy. In this guide, it will show you how to perform the 3 main things:
+Broadly speaking, if you wish to incorporate our strategy into your service, there are two main approaches you can adopt. First, you can directly engage with our vault through a programming language such as Javascript. Alternatively, you may use our collateral token within the context of a separate strategy. This guide is intended to walk you through the key processes to accomplish the following three main objectives:
 
 * [Deposit into the vault](how-to-deposit.md)
 * [Withdraw from the vault](how-to-withdraw.md)
