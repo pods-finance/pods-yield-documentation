@@ -36,9 +36,10 @@
   * [STETHVault](developers/smart-contracts-overview/stethvault.md)
   * [BaseVault](developers/smart-contracts-overview/basevault.md)
 * [Contracts Addresses](developers/contracts-addresses.md)
-* [Integration guide](developers/integration-guide.md)
-* [How to deposit](developers/how-to-deposit.md)
-* [How to withdraw](developers/how-to-withdraw.md)
+* [Integration guide](developers/integration-guide/README.md)
+  * [How to deposit](developers/integration-guide/how-to-deposit.md)
+  * [How to withdraw](developers/integration-guide/how-to-withdraw.md)
+  * [How to read Vault info](developers/integration-guide/how-to-read-vault-info.md)
 
 ## Connect
 
