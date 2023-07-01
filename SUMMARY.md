@@ -38,6 +38,7 @@
 * [Contracts Addresses](developers/contracts-addresses.md)
 * [Integration guide](developers/integration-guide.md)
 * [How to deposit](developers/how-to-deposit.md)
+* [How to withdraw](developers/how-to-withdraw.md)
 
 ## Connect
 
